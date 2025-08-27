@@ -1,1 +1,6 @@
+# Forçar GitHub Linguist a reconhecer C
 *.c linguist-language=C
+
+# Ignorar arquivos de configuração e docs na contagem de linguagem
+*.md linguist-detectable=false
+.vscode/* linguist-detectable=false
