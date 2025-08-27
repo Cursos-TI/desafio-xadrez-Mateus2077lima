@@ -1,22 +1,64 @@
 #include <stdio.h>
 
-// Desafio de Xadrez - MateCheck
-// Este código inicial serve como base para o desenvolvimento do sistema de movimentação das peças de xadrez.
-// O objetivo é utilizar estruturas de repetição e funções para determinar os limites de movimentação dentro do jogo.
+int main(){
+    //Declaração das variaveis
+    int i = 1;
+    int posicaoCasa = 1;
+    int numeroMovimentos;
 
-int main() {
-    // Nível Novato - Movimentação das Peças
-    // Sugestão: Declare variáveis constantes para representar o número de casas que cada peça pode se mover.
+    //lendo o número de movimentos que o usuario quer que a torre faça
+    printf("Digite a quantidade de movimentos da torre: ");
+    scanf("%d", &numeroMovimentos);
 
-    // Implementação de Movimentação do Bispo
-    // Sugestão: Utilize uma estrutura de repetição para simular a movimentação do Bispo em diagonal.
+    //utilizando do-while para fazer os movimentos da torre
+    do{
+        if (i == 1){
+            printf("=================================\n");
+            printf("         Movimento da Torre      \n");
+            printf("=================================\n");
+        }
+        
+        printf("Casa %d - Direita \n",posicaoCasa);
+        i++;
+        posicaoCasa++;
+    } while (i <= numeroMovimentos);
 
-    // Implementação de Movimentação da Torre
-    // Sugestão: Utilize uma estrutura de repetição para simular a movimentação da Torre para a direita.
+    i = 1;//reiniciando a variavel i
+    posicaoCasa = 1;//reiniciando a variavel posicaoCasa
+    printf("=================================\n");
+    //lendo o número de movimentos que o usuario quer que a bispo faça
+    printf("Digite a quantidade de movimentos do bispo: ");
+    scanf("%d", &numeroMovimentos);
 
-    // Implementação de Movimentação da Rainha
-    // Sugestão: Utilize uma estrutura de repetição para simular a movimentação da Rainha para a esquerda.
+    while (i <= numeroMovimentos){
+        if (i == 1){
+            printf("\n=================================\n");
+            printf("         Movimento do Bispo      \n");
+            printf("=================================\n");
+        }
 
+        printf("Casa %d - Cima,Direita \n", posicaoCasa);
+        i++;
+        posicaoCasa++;
+    }
+
+    printf("=================================\n");
+    posicaoCasa = 1;//reiniciando a variavel posição casa;
+    //lendo o número de movimentos que o usuario quer que a rainha faça
+    printf("Digite a quantidade de movimentos da rainha: ");
+    scanf("%d", &numeroMovimentos);
+
+    for (i = 1; i <= numeroMovimentos; i++){
+        if (i == 1){
+            printf("\n=================================\n");
+            printf("        Movimento da Rainha      \n");
+            printf("=================================\n");
+        }
+        
+        printf("Casa %d - Esquerda \n", posicaoCasa);
+        posicaoCasa++;
+    }
+     
     // Nível Aventureiro - Movimentação do Cavalo
     // Sugestão: Utilize loops aninhados para simular a movimentação do Cavalo em L.
     // Um loop pode representar a movimentação horizontal e outro vertical.
@@ -27,6 +69,9 @@ int main() {
 
     // Sugestão: Implemente a movimentação do Cavalo utilizando loops com variáveis múltiplas e condições avançadas.
     // Inclua o uso de continue e break dentro dos loops.
+    
+
+
 
     return 0;
 }
